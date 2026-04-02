@@ -9,6 +9,7 @@ namespace LoginScreen
 
         string MyID = "admin";
         string MyPW = "superman";
+
         private void txtPW_TextChanged(object sender, EventArgs e)
         {
 
@@ -54,13 +55,31 @@ namespace LoginScreen
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtID.Text == MyID && txtPW.Text == MyPW)
+            if (txtID.Text == MyID && txtPW.Text == MyPW)
             {
                 MessageBox.Show("로그인 성공!", "", MessageBoxButtons.OK);
+                lblErrorMessage.Visible = false;
             }
             else
             {
-                MessageBox.Show("로그인 실패~", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               // MessageBox.Show("로그인 실패~", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblErrorMessage.Visible = true;
+            }
+        }
+
+        private void txtID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter) {
+                e.SuppressKeyPress = true; 
+                txtPW.Focus();
+            }
+        }
+
+        private void txtPW_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter){
+                e.SuppressKeyPress = true; 
+                btnLogin.PerformClick();
             }
         }
     }
