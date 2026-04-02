@@ -14,7 +14,7 @@
 
 ## 실행 화면 (과제1)
 - 과제1 코드의 실행 스크린샷
-![과제1 실행화면](img/20260402_161437.gif) (img/screenshot-1.png) (img/screenshot-2.png) (img/screenshot-3.png)
+![과제1 실행화면](img/20260402_161437.gif) ![image](img/screenshot-1.png) ![image](img/screenshot-2.png) ![image](img/screenshot-3.png)
 
 - 과제 내용
 - TextBox(아이디, 패스워드), Button(로그인) 등을 적절히 배치하여 UI 구성.
